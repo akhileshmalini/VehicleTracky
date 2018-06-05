@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textSize="18dp"
+        android:layout_alignParentTop="true"
+        android:text="Fuel Log Entry" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/ic_gas_station" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView6"
+        android:text="Fuel Before Refill" />
+
+    <EditText
+        android:id="@+id/editFuelBefore"
+        android:layout_alignParentRight="true"
+        android:layout_width="match_parent"
+        android:hint="litres"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/textView11"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/editFuelBefore"
+        android:text="Fuel After Refill" />
+
+    <EditText
+        android:id="@+id/editFuelAfter"
+        android:layout_alignParentRight="true"
+        android:hint="litres"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_centerVertical="true"
+        android:ems="10"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/textView12"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editFuelAfter"
+        android:layout_marginLeft="34dp"
+        android:layout_marginTop="10dp"
+        android:text="Location" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-20dp"
+        android:layout_below="@+id/textView13"
+
+
+        app:srcCompat="@drawable/ic_my_location_black_24dp" />
+
+    <TextView
+        android:id="@+id/txtLatLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_below="@+id/imageView8"
+        android:text="" />
+
+    <Button
+        android:id="@+id/btnAddFuel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtLatLong"
+        android:background="@color/colorPrimary"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/textView6"
+        android:text="Add" />
+</RelativeLayout>

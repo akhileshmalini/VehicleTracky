@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "890923935242",
+    "firebase_url": "https://tracky-93edf.firebaseio.com",
+    "project_id": "tracky-93edf",
+    "storage_bucket": "tracky-93edf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:890923935242:android:37e2812d3c722ab2",
+        "android_client_info": {
+          "package_name": "com.hackathon.tracky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "890923935242-7ineagp5csimkklk8laulrblin48t7kb.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "890923935242-7ineagp5csimkklk8laulrblin48t7kb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4tXMOCbNJ-V_irOYS0tofaWV2ORBxyTQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
