@@ -23,8 +23,5 @@
 
     </item>
 
-    <item
-        android:id="@+id/action_signout"
-        android:icon="@drawable/ic_forum"
-        android:title="SignOut" />
+   
 </menu>

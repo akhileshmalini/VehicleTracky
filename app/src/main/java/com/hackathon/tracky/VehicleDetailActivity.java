@@ -388,7 +388,7 @@ public class VehicleDetailActivity extends AppCompatActivity {
     void create(String vehicle, double mileage)
     {
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference ref = database.getReference().child("mileage").child(vehicle);
+        DatabaseReference ref = database.getReference().child("mileage").child(uid).child(vehicle);
         Long tsLong = System.currentTimeMillis()/1000;
         String ts = tsLong.toString();
         ref.child(ts).setValue(new mileage(mileage));

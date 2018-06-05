@@ -129,8 +129,8 @@ public class VehicleHomeFragment extends android.support.v4.app.Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getChildrenCount() < 1) {
-                    mDatabase.child("mileage").child(activity.getVehicleNumber()).removeValue();
-                    mDatabase.child("performance").child(activity.getVehicleNumber()).removeValue();
+                    mDatabase.child("mileage").child(firebaseUser.getUid()).child(activity.getVehicleNumber()).removeValue();
+                    mDatabase.child("performance").child(firebaseUser.getUid()).child(activity.getVehicleNumber()).removeValue();
                 }
             }
 
@@ -141,7 +141,7 @@ public class VehicleHomeFragment extends android.support.v4.app.Fragment {
         mFuellogReference.addValueEventListener(fuelloglistener);
 
 
-        DatabaseReference mileageRef = mDatabase.child("mileage").child(activity.getVehicleNumber());
+        DatabaseReference mileageRef = mDatabase.child("mileage").child(firebaseUser.getUid()).child(activity.getVehicleNumber());
         try {
             ValueEventListener listener = new ValueEventListener() {
                 List<mileage> mlist = new ArrayList<>();
@@ -162,14 +162,16 @@ public class VehicleHomeFragment extends android.support.v4.app.Fragment {
                         }
                         lastMileage = last.mileage;
                         averageMileage = mileage_cal/count;
-                        DatabaseReference ref2 = mDatabase.child("performance").child(activity.getVehicleNumber());
-                        ref2.setValue(new Performance(mileage_cal));
+                        DatabaseReference ref2 = mDatabase.child("performance").child(firebaseUser.getUid()).child(activity.getVehicleNumber());
+                        ref2.setValue(new Performance(averageMileage));
                         setPerformance();
                     } else if (mlist.size() == 1) {
                         mileage last = new mileage(0.0);
                         last = mlist.get(0);
                         lastMileage = last.mileage;
                         averageMileage = lastMileage;
+                        DatabaseReference ref2 = mDatabase.child("performance").child(firebaseUser.getUid()).child(activity.getVehicleNumber());
+                        ref2.setValue(new Performance(averageMileage));
                         setPerformance();
                     } else {
                         textView.setText("N/A");
